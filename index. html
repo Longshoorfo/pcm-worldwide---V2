@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCM Worldwide | Learn Without Limits</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#17243b}
+header{background:#102b50;color:white;padding:22px 7%}
+header h1{font-size:27px}
+header p{color:#b9d3f5;margin-top:6px}
+nav{background:#163c69;padding:14px 7%;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(120deg,#102b50,#1769aa);color:white;padding:65px 7%}
+.hero h2{font-size:36px;max-width:600px}
+.hero p{margin:16px 0;line-height:1.7;max-width:550px}
+.btn{display:inline-block;background:#fff;color:#14518c;padding:12px 20px;border-radius:7px;text-decoration:none;font-weight:bold}
+section{padding:40px 7%}
+section h2{margin-bottom:20px;color:#12365e}
+.subjects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;padding:24px;border-radius:12px;box-shadow:0 3px 15px #102b5010}
+.card h3{margin-bottom:12px}
+.card p{line-height:1.6;color:#526174}
+.card a{display:inline-block;margin-top:15px;color:#1769aa;font-weight:bold;text-decoration:none}
+.search{width:100%;padding:15px;border:1px solid #ccd5e1;border-radius:8px;font-size:16px;margin-bottom:20px}
+.lesson{background:white;padding:18px;border-radius:9px;margin:12px 0}
+footer{background:#102b50;color:white;padding:30px 7%;text-align:center;line-height:1.8}
+.small{color:#a9c9ee}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🌍 PCM Worldwide</h1>
+<p>Physics • Chemistry • Mathematics</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#subjects">Subjects</a>
+<a href="#lessons">Lessons</a>
+<a href="#about">About Us</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>Learn Without Limits. Think Beyond Borders.</h2>
+<p>
+Welcome to PCM Worldwide, a learning community connecting
+Physics, Chemistry and Mathematics students across the world.
+Learn, explore and grow together.
+</p>
+<a href="#subjects" class="btn">Explore Subjects →</a>
+</div>
+
+<section id="subjects">
+<h2>📚 Explore Our Subjects</h2>
+<div class="subjects">
+
+<div class="card">
+<h3>⚡ Physics</h3>
+<p>Discover mechanics, electricity, waves, optics and the laws governing our universe.</p>
+<a href="#lessons">Explore Physics →</a>
+</div>
+
+<div class="card">
+<h3>🧪 Chemistry</h3>
+<p>Explore atoms, chemical reactions, organic chemistry and the world of matter.</p>
+<a href="#lessons">Explore Chemistry →</a>
+</div>
+
+<div class="card">
+<h3>📐 Mathematics</h3>
+<p>Master algebra, geometry, calculus, statistics and mathematical reasoning.</p>
+<a href="#lessons">Explore Mathematics →</a>
+</div>
+
+</div>
+</section>
+
+<section id="lessons">
+<h2>🎓 Learning Centre</h2>
+<input class="search" id="search" placeholder="Search a subject or topic..." oninput="searchLessons()">
+
+<div id="lessonList">
+<div class="lesson"><b>Physics:</b> Introduction to Motion</div>
+<div class="lesson"><b>Physics:</b> Force and Newton's Laws</div>
+<div class="lesson"><b>Chemistry:</b> Atomic Structure</div>
+<div class="lesson"><b>Chemistry:</b> Chemical Bonding</div>
+<div class="lesson"><b>Mathematics:</b> Algebra Fundamentals</div>
+<div class="lesson"><b>Mathematics:</b> Introduction to Geometry</div>
+</div>
+</section>
+
+<section id="about">
+<h2>🌍 About PCM Worldwide</h2>
+<p style="line-height:1.8">
+PCM Worldwide is an educational initiative designed to bring
+Physics, Chemistry and Mathematics students together.
+Our vision is to make quality learning accessible, encourage
+collaboration and build a worldwide community of future scientists.
+</p>
+</section>
+
+<section id="contact">
+<h2>📩 Join Our Community</h2>
+<p>Be part of the PCM Worldwide journey.</p>
+<p style="margin-top:12px">Website Version: 1.0</p>
+</section>
+
+<footer>
+<h3>PCM WORLDWIDE</h3>
+<p>Connecting Minds. Building Knowledge. Shaping the Future.</p>
+<p class="small">© 2026 PCM Worldwide. All rights reserved.</p>
+</footer>
+
+<script>
+function searchLessons(){
+let query=document.getElementById("search").value.toLowerCase();
+document.querySelectorAll(".lesson").forEach(item=>{
+item.style.display=item.innerText.toLowerCase().includes(query)?"block":"none";
+});
+}
+</script>
+
+</body>
+</html>
